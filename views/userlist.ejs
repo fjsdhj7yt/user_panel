@@ -1,0 +1,73 @@
+<!-- userlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <!-- <link rel="stylesheet" href="/userlist.css"> -->
+    <style>
+        /* userlist.css */
+
+/* Style for the user list container */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table header */
+.user-table th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style for table rows */
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Style for user name */
+.user-name {
+    font-weight: bold;
+}
+
+/* Style for user email */
+.user-email {
+    color: #666;
+}
+
+/* Style for edit link */
+.edit-link {
+    color: blue;
+    text-decoration: none;
+}
+
+    </style>
+    <!-- Include any necessary CSS -->
+</head>
+<body>
+    <h1>User List</h1>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(user => { %>
+                <tr>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><a href="/edit/<%= user.id %>">Edit</a></td> <!-- Link to edit page for each user -->
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
