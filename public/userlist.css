@@ -1,0 +1,32 @@
+/* userlist.css */
+
+/* Style for the user list container */
+.user-list {
+    margin: 20px;
+  }
+  
+  /* Style for each user item */
+  .user-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for user name */
+  .user-name {
+    font-weight: bold;
+  }
+  
+  /* Style for user email */
+  .user-email {
+    color: #666;
+  }
+  
+  /* Style for edit link */
+  .edit-link {
+    color: red;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
